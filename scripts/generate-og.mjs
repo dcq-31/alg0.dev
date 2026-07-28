@@ -110,6 +110,7 @@ const algorithms = [
   ['sudoku-solver', 'Sudoku Solver', 'Backtracking'],
   ['maze-pathfinding', 'Maze Pathfinding', 'Backtracking'],
   ['tower-of-hanoi', 'Tower of Hanoi', 'Divide and Conquer'],
+  ['euclidean', 'Euclidean Algorithm', 'Math'],
   ['sieve-of-eratosthenes', 'Sieve of Eratosthenes', 'Math'],
   ['run-length-encoding', 'Run-Length Encoding', 'Compression'],
   ['lz77', 'LZ77', 'Compression'],

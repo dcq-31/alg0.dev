@@ -49,7 +49,7 @@ import { nQueens, sudokuSolver, mazePathfinding } from '@lib/algorithms/backtrac
 
 import { towerOfHanoi } from '@lib/algorithms/divide-and-conquer'
 
-import { sieveOfEratosthenes } from '@lib/algorithms/math'
+import { euclideanAlgorithm, sieveOfEratosthenes } from '@lib/algorithms/math'
 
 import {
   runLengthEncoding,
@@ -116,6 +116,7 @@ export const algorithms: Algorithm[] = [
   // Divide and Conquer
   towerOfHanoi,
   // Math
+  euclideanAlgorithm,
   sieveOfEratosthenes,
   // Compression
   runLengthEncoding,

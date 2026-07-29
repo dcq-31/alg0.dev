@@ -2,6 +2,16 @@ import type { CodeImplementation } from '@lib/types'
 import { annotated } from '@lib/code-languages'
 
 export const mathPython: Record<string, CodeImplementation> = {
+  euclidean: annotated(`def gcd(a, b):
+    while b != 0:  #@2
+        q = a // b  #@3
+        r = a % b  #@4
+        a = b  #@5
+        b = r  #@6
+    return a  #@8
+
+
+gcd(48, 36)`),
   'sieve-of-eratosthenes': annotated(`def sieve_of_eratosthenes(n):
     is_prime = [True] * (n + 1)  #@2
     is_prime[0] = is_prime[1] = False

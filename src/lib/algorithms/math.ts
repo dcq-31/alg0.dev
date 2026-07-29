@@ -1,6 +1,117 @@
 import type { Algorithm, Step, HighlightType } from '@lib/types'
 import { d } from '@lib/algorithms/shared'
 
+const euclideanAlgorithm: Algorithm = {
+  id: 'euclidean',
+  name: 'Euclidean Algorithm',
+  category: 'Math',
+  difficulty: 'easy',
+  visualization: 'concept',
+  code: `function gcd(a, b) {
+  while (b !== 0) {
+    const q = Math.floor(a / b);
+    const r = a % b;
+    a = b;
+    b = r;
+  }
+  return a;
+}
+
+gcd(48, 36);`,
+
+  generateSteps(locale = 'en') {
+    const A0 = 48
+    const B0 = 36
+
+    const steps: Step[] = []
+    const history: { a: number; b: number; q: number; r: number }[] = []
+
+    let a = A0
+    let b = B0
+
+    steps.push({
+      concept: { type: 'euclidean', a, b, phase: 'intro', history: [...history] },
+      description: d(
+        locale,
+        `Compute gcd(${A0}, ${B0}). Euclid's key idea: gcd(a, b) = gcd(b, a mod b).`,
+        `Calcular gcd(${A0}, ${B0}). La idea clave de Euclides: gcd(a, b) = gcd(b, a mod b).`,
+      ),
+      codeLine: 2,
+      variables: { a, b },
+    })
+
+    while (b !== 0) {
+      const q = Math.floor(a / b)
+      const r = a % b
+
+      steps.push({
+        concept: {
+          type: 'euclidean',
+          a,
+          b,
+          quotient: q,
+          remainder: r,
+          phase: 'divide',
+          history: [...history],
+          operation: `${a} mod ${b} = ${r}`,
+        },
+        description:
+          r === 0
+            ? d(
+                locale,
+                `${a} = ${q} · ${b} + 0. The remainder is 0, so the divisor ${b} is the gcd.`,
+                `${a} = ${q} · ${b} + 0. El residuo es 0, así que el divisor ${b} es el gcd.`,
+              )
+            : d(
+                locale,
+                `${a} = ${q} · ${b} + ${r}. Remainder ${r} ≠ 0, so gcd(${a}, ${b}) = gcd(${b}, ${r}).`,
+                `${a} = ${q} · ${b} + ${r}. Residuo ${r} ≠ 0, así que gcd(${a}, ${b}) = gcd(${b}, ${r}).`,
+              ),
+        codeLine: 4,
+        variables: { a, b, q, r },
+      })
+
+      history.push({ a, b, q, r })
+      a = b
+      b = r
+
+      if (b === 0) {
+        steps.push({
+          concept: { type: 'euclidean', a, b, phase: 'done', history: [...history], gcd: a },
+          description: d(
+            locale,
+            `Done. gcd(${A0}, ${B0}) = ${a}.`,
+            `Listo. gcd(${A0}, ${B0}) = ${a}.`,
+          ),
+          codeLine: 8,
+          variables: { a, b, gcd: a },
+          consoleOutput: [String(a)],
+        })
+      } else {
+        steps.push({
+          concept: {
+            type: 'euclidean',
+            a,
+            b,
+            phase: 'reduce',
+            history: [...history],
+            operation: `a ← ${a}, b ← ${b}`,
+          },
+          description: d(
+            locale,
+            `Slide the pair down: a ← ${a}, b ← ${b}. Repeat the division.`,
+            `Desplazar el par: a ← ${a}, b ← ${b}. Repetir la división.`,
+          ),
+          codeLine: 6,
+          variables: { a, b },
+        })
+      }
+    }
+
+    return steps
+  },
+}
+
 const sieveOfEratosthenes: Algorithm = {
   id: 'sieve-of-eratosthenes',
   name: 'Sieve of Eratosthenes',
@@ -147,4 +258,4 @@ sieveOfEratosthenes(30);`,
   },
 }
 
-export { sieveOfEratosthenes }
+export { euclideanAlgorithm, sieveOfEratosthenes }

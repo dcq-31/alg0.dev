@@ -97,6 +97,7 @@ const ALGORITHM_LOADERS: Record<string, () => Promise<Algorithm>> = {
     import('./divide-and-conquer?algorithm=towerOfHanoi').then(readDefaultAlgorithm),
 
   // Math
+  euclidean: () => import('./math?algorithm=euclideanAlgorithm').then(readDefaultAlgorithm),
   'sieve-of-eratosthenes': () =>
     import('./math?algorithm=sieveOfEratosthenes').then(readDefaultAlgorithm),
 

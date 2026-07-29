@@ -240,6 +240,26 @@ export interface BucketsState {
   operation?: string
 }
 
+// ── Math visualization types ──
+
+export interface EuclideanState {
+  type: 'euclidean'
+  /** Current dividend. */
+  a: number
+  /** Current divisor. Reaches 0 when the algorithm finishes. */
+  b: number
+  /** Quotient of the active division `a = q·b + r` (undefined on the intro step). */
+  quotient?: number
+  /** Remainder of the active division. `0` marks the final step. */
+  remainder?: number
+  phase: 'intro' | 'divide' | 'reduce' | 'done'
+  /** Completed reduction rows, oldest first. */
+  history: { a: number; b: number; q: number; r: number }[]
+  /** Result, set on the final step. */
+  gcd?: number
+  operation?: string
+}
+
 // ── Compression visualization types ──
 
 export interface HuffmanState {
@@ -413,6 +433,7 @@ export type ConceptState =
   | LzwState
   | DeflateState
   | BrotliState
+  | EuclideanState
 
 export interface Step {
   array?: number[]

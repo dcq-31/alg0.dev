@@ -303,6 +303,13 @@ export const algorithmCatalog: AlgorithmSummary[] = [
   },
   // Math
   {
+    id: 'euclidean',
+    name: 'Euclidean Algorithm',
+    category: 'Math',
+    difficulty: 'easy',
+    visualization: 'concept',
+  },
+  {
     id: 'sieve-of-eratosthenes',
     name: 'Sieve of Eratosthenes',
     category: 'Math',

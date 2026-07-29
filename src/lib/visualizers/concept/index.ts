@@ -23,6 +23,7 @@ export type ConceptType =
   | 'lzw'
   | 'deflate'
   | 'brotli'
+  | 'euclidean'
 
 type ConceptRenderer = (state: never) => HTMLElement
 
@@ -72,6 +73,8 @@ const loaders: Record<ConceptType, () => Promise<ConceptRenderer>> = {
     import('@lib/visualizers/concept/deflate').then((m) => m.renderDeflate as ConceptRenderer),
   brotli: () =>
     import('@lib/visualizers/concept/brotli').then((m) => m.renderBrotli as ConceptRenderer),
+  euclidean: () =>
+    import('@lib/visualizers/concept/euclidean').then((m) => m.renderEuclidean as ConceptRenderer),
 }
 
 const cache = new Map<ConceptType, ConceptRenderer>()

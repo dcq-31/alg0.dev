@@ -2,6 +2,17 @@ import type { CodeImplementation } from '@lib/types'
 import { annotated } from '@lib/code-languages'
 
 export const mathCpp: Record<string, CodeImplementation> = {
+  euclidean: annotated(`int gcd(int a, int b) {
+    while (b != 0) {  //@2
+        int q = a / b;  //@3
+        int r = a % b;  //@4
+        a = b;  //@5
+        b = r;  //@6
+    }
+    return a;  //@8
+}
+
+gcd(48, 36);`),
   'sieve-of-eratosthenes': annotated(`vector<int> sieveOfEratosthenes(int n) {
     vector<bool> isPrime(n + 1, true);  //@2
     isPrime[0] = isPrime[1] = false;

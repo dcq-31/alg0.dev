@@ -27,7 +27,7 @@ Una herramienta web interactiva y gratuita para aprender algoritmos a través de
 - **Seguimiento de variables** — ve el estado de cada variable en tiempo real
 - **Explicación contextual** — entiende el _porqué_ de cada operación
 
-## +40 algoritmos en 8 categorías
+## +41 algoritmos en 8 categorías
 
 <table>
 <tr>
@@ -86,7 +86,7 @@ Torre de Hanói
 
 ### Conceptos
 
-Big O · Recursión · Two Pointers · Sliding Window · Memoización · Greedy vs DP · Space Complexity
+Big O · Recursión · Two Pointers · Sliding Window · Prefix Sum Array · Memoización · Greedy vs DP · Space Complexity
 
 </td>
 </tr>

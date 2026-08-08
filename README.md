@@ -27,7 +27,7 @@ A free, interactive web tool to learn algorithms through animated step-by-step v
 - **Variable tracking** — see the state of every variable in real time
 - **Contextual explanation** — understand the _why_ behind each operation
 
-## 40+ algorithms across 8 categories
+## 41+ algorithms across 8 categories
 
 <table>
 <tr>
@@ -86,7 +86,7 @@ Tower of Hanoi
 
 ### Concepts
 
-Big O · Recursion · Two Pointers · Sliding Window · Memoization · Greedy vs DP · Space Complexity
+Big O · Recursion · Two Pointers · Sliding Window · Prefix Sum Array · Memoization · Greedy vs DP · Space Complexity
 
 </td>
 </tr>

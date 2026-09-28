@@ -1300,7 +1300,7 @@ function rangeSum(prefix, left, right) {
           `Add arr[${i}] = ${array[i]} to the previous prefix. Now prefix[${i}] stores the sum of the whole range [0..${i}] = ${fullPrefix[i]}.`,
           `Suma arr[${i}] = ${array[i]} al prefijo anterior. Ahora prefix[${i}] guarda la suma de todo el rango [0..${i}] = ${fullPrefix[i]}.`,
         ),
-        codeLine: i === 1 ? 5 : 6,
+        codeLine: 6,
         variables: {
           i,
           'prefix[i - 1]': fullPrefix[i - 1],
@@ -1327,7 +1327,7 @@ function rangeSum(prefix, left, right) {
         'Base case: if the range starts at index 0, the answer is just prefix[right]. sum(0, 2) = prefix[2] = 8.',
         'Caso base: si el rango empieza en el índice 0, la respuesta es simplemente prefix[right]. sum(0, 2) = prefix[2] = 8.',
       ),
-      codeLine: 12,
+      codeLine: 13,
       variables: { left: 0, right: 2, answer: 8, formula: 'prefix[2]' },
     })
 

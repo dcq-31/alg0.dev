@@ -7,12 +7,12 @@ import { applyStyles } from '@lib/visualizers/concept/dom'
 const ARRAY_COLORS = {
   default: { bg: 'var(--subtle)', border: 'var(--viz-border)', text: 'var(--viz-label)' },
   current: { bg: 'rgba(96,165,250,0.15)', border: 'rgba(96,165,250,0.38)', text: '#60a5fa' },
-  inRange: { bg: 'rgba(74,222,128,0.16)', border: 'rgba(74,222,128,0.4)', text: '#86efac' },
+  inRange: { bg: 'rgba(74,222,128,0.16)', border: 'rgba(74,222,128,0.4)', text: '#4ade80' },
 }
 
 const PREFIX_COLORS = {
-  empty: { bg: 'rgba(255,255,255,0.03)', border: 'var(--viz-border)', text: 'var(--viz-muted)' },
-  ready: { bg: 'rgba(250,204,21,0.12)', border: 'rgba(250,204,21,0.32)', text: '#fde047' },
+  empty: { bg: 'var(--viz-cell)', border: 'var(--viz-border)', text: 'var(--viz-muted)' },
+  ready: { bg: 'rgba(250,204,21,0.12)', border: 'rgba(250,204,21,0.32)', text: '#eab308' },
   active: { bg: 'rgba(251,146,60,0.14)', border: 'rgba(251,146,60,0.4)', text: '#fb923c' },
 }
 
@@ -141,14 +141,6 @@ export function renderPrefixSum(state: PrefixSumState): HTMLElement {
       line.innerHTML = `sum(${query.left}, ${query.right}) = prefix[${query.right}] - prefix[${query.left - 1}] = <span class="text-orange-300">${rightPrefix}</span> - <span class="text-amber-300">${leftPrefix}</span> = <span class="text-green-300 font-bold">${query.sum}</span>`
     }
     wrap.append(line)
-  }
-
-  if (phase === 'done') {
-    const summary = document.createElement('div')
-    summary.className = 'font-mono text-xs text-neutral-400 text-center max-w-xl'
-    summary.textContent =
-      'One O(n) preprocessing pass turns repeated range sums into O(1) lookups on a static array.'
-    wrap.append(summary)
   }
 
   return wrap

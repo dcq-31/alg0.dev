@@ -35,7 +35,7 @@ A free, interactive web tool to learn algorithms through animated step-by-step v
 
 ### Sorting
 
-Bubble Sort · Selection Sort · Insertion Sort · Quick Sort · Merge Sort · Heap Sort · Counting Sort · Radix Sort · Shell Sort
+Bubble Sort · Selection Sort · Insertion Sort · Quick Sort · Merge Sort · Heap Sort · Counting Sort · Radix Sort · Shell Sort · Bucket Sort
 
 </td>
 <td width="25%" valign="top">
@@ -79,7 +79,7 @@ N-Queens · Sudoku Solver · Maze Pathfinding
 
 ### Divide & Conquer
 
-Tower of Hanoi
+Tower of Hanoi · Binary Exponentiation
 
 </td>
 <td width="25%" valign="top">

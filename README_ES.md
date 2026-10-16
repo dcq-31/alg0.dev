@@ -35,7 +35,7 @@ Una herramienta web interactiva y gratuita para aprender algoritmos a través de
 
 ### Ordenamiento
 
-Bubble Sort · Selection Sort · Insertion Sort · Quick Sort · Merge Sort · Heap Sort · Counting Sort · Radix Sort · Shell Sort
+Bubble Sort · Selection Sort · Insertion Sort · Quick Sort · Merge Sort · Heap Sort · Counting Sort · Radix Sort · Shell Sort · Bucket Sort
 
 </td>
 <td width="25%" valign="top">
@@ -79,7 +79,7 @@ N-Queens · Sudoku Solver · Maze Pathfinding
 
 ### Divide y vencerás
 
-Torre de Hanói
+Torre de Hanói · Exponenciación Binaria
 
 </td>
 <td width="25%" valign="top">

@@ -48,7 +48,7 @@ import { fibonacciDp, knapsack, lcs } from '@lib/algorithms/dynamic-programming'
 
 import { nQueens, sudokuSolver, mazePathfinding } from '@lib/algorithms/backtracking'
 
-import { towerOfHanoi } from '@lib/algorithms/divide-and-conquer'
+import { towerOfHanoi, binaryExponentiation } from '@lib/algorithms/divide-and-conquer'
 
 import { euclideanAlgorithm, sieveOfEratosthenes } from '@lib/algorithms/math'
 
@@ -117,6 +117,7 @@ export const algorithms: Algorithm[] = [
   mazePathfinding,
   // Divide and Conquer
   towerOfHanoi,
+  binaryExponentiation,
   // Math
   euclideanAlgorithm,
   sieveOfEratosthenes,

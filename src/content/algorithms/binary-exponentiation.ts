@@ -15,7 +15,7 @@ Why it is fast:
   Each recursive call cuts the exponent in half, so the recursion depth is proportional to log₂ n instead of n.
 
 Time Complexity:
-  Best:    O(1)
+  Best:    O(log n)
   Average: O(log n)
   Worst:   O(log n)
 
@@ -41,7 +41,7 @@ Por qué es rápida:
   Cada llamada recursiva corta el exponente a la mitad, así que la profundidad de la recursión es proporcional a log₂ n en vez de n.
 
 Complejidad Temporal:
-  Mejor:    O(1)
+  Mejor:    O(log n)
   Promedio: O(log n)
   Peor:     O(log n)
 

@@ -27,7 +27,7 @@ Una herramienta web interactiva y gratuita para aprender algoritmos a través de
 - **Seguimiento de variables** — ve el estado de cada variable en tiempo real
 - **Explicación contextual** — entiende el _porqué_ de cada operación
 
-## +41 algoritmos en 8 categorías
+## +40 algoritmos en 8 categorías
 
 <table>
 <tr>

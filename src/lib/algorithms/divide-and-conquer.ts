@@ -170,9 +170,7 @@ binPow(2, 10);`,
     steps.push({
       concept: {
         type: 'callStack',
-        frames: [
-          { label: 'binPow(2, 10)', detail: 'exp=10 is even → call binPow(2, 5)', state: 'active' },
-        ],
+        frames: [{ label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'active' }],
       },
       description: d(
         locale,
@@ -187,8 +185,8 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'exp=5 is odd → call binPow(2, 2)', state: 'active' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: 'binPow(2, 2)² × 2', state: 'active' },
         ],
       },
       description: d(
@@ -204,9 +202,9 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'waiting for binPow(2, 2)…', state: 'waiting' },
-          { label: 'binPow(2, 2)', detail: 'exp=2 is even → call binPow(2, 1)', state: 'active' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: 'binPow(2, 2)² × 2', state: 'waiting' },
+          { label: 'binPow(2, 2)', detail: 'binPow(2, 1)²', state: 'active' },
         ],
       },
       description: d(
@@ -222,10 +220,10 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'waiting for binPow(2, 2)…', state: 'waiting' },
-          { label: 'binPow(2, 2)', detail: 'waiting for binPow(2, 1)…', state: 'waiting' },
-          { label: 'binPow(2, 1)', detail: 'exp=1 is odd → call binPow(2, 0)', state: 'active' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: 'binPow(2, 2)² × 2', state: 'waiting' },
+          { label: 'binPow(2, 2)', detail: 'binPow(2, 1)²', state: 'waiting' },
+          { label: 'binPow(2, 1)', detail: 'binPow(2, 0)² × 2', state: 'active' },
         ],
       },
       description: d(
@@ -241,11 +239,11 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'waiting for binPow(2, 2)…', state: 'waiting' },
-          { label: 'binPow(2, 2)', detail: 'waiting for binPow(2, 1)…', state: 'waiting' },
-          { label: 'binPow(2, 1)', detail: 'waiting for binPow(2, 0)…', state: 'waiting' },
-          { label: 'binPow(2, 0)', detail: 'BASE CASE: return 1', state: 'base' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: 'binPow(2, 2)² × 2', state: 'waiting' },
+          { label: 'binPow(2, 2)', detail: 'binPow(2, 1)²', state: 'waiting' },
+          { label: 'binPow(2, 1)', detail: 'binPow(2, 0)² × 2', state: 'waiting' },
+          { label: 'binPow(2, 0)', detail: 'return 1', state: 'base' },
         ],
       },
       description: d(
@@ -261,10 +259,10 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'waiting for binPow(2, 2)…', state: 'waiting' },
-          { label: 'binPow(2, 2)', detail: 'waiting for binPow(2, 1)…', state: 'waiting' },
-          { label: 'binPow(2, 1)', detail: 'half=1, odd → 1×1×2 = 2', state: 'active' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: 'binPow(2, 2)² × 2', state: 'waiting' },
+          { label: 'binPow(2, 2)', detail: 'binPow(2, 1)²', state: 'waiting' },
+          { label: 'binPow(2, 1)', detail: '1² × 2 = 2', state: 'active' },
         ],
       },
       description: d(
@@ -280,9 +278,9 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'waiting for binPow(2, 2)…', state: 'waiting' },
-          { label: 'binPow(2, 2)', detail: 'half=2, even → 2×2 = 4', state: 'active' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: 'binPow(2, 2)² × 2', state: 'waiting' },
+          { label: 'binPow(2, 2)', detail: '2² = 4', state: 'active' },
         ],
       },
       description: d(
@@ -298,8 +296,8 @@ binPow(2, 10);`,
       concept: {
         type: 'callStack',
         frames: [
-          { label: 'binPow(2, 10)', detail: 'waiting for binPow(2, 5)…', state: 'waiting' },
-          { label: 'binPow(2, 5)', detail: 'half=4, odd → 4×4×2 = 32', state: 'active' },
+          { label: 'binPow(2, 10)', detail: 'binPow(2, 5)²', state: 'waiting' },
+          { label: 'binPow(2, 5)', detail: '4² × 2 = 32', state: 'active' },
         ],
       },
       description: d(
@@ -314,9 +312,7 @@ binPow(2, 10);`,
     steps.push({
       concept: {
         type: 'callStack',
-        frames: [
-          { label: 'binPow(2, 10)', detail: 'half=32, even → 32×32 = 1024', state: 'resolved' },
-        ],
+        frames: [{ label: 'binPow(2, 10)', detail: '32² = 1024', state: 'resolved' }],
       },
       description: d(
         locale,

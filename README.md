@@ -27,7 +27,7 @@ A free, interactive web tool to learn algorithms through animated step-by-step v
 - **Variable tracking** — see the state of every variable in real time
 - **Contextual explanation** — understand the _why_ behind each operation
 
-## 41+ algorithms across 8 categories
+## 40+ algorithms across 8 categories
 
 <table>
 <tr>
